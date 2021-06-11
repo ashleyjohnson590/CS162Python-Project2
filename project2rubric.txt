@@ -1,0 +1,73 @@
+Assignment 2 Rubric
+Criteria	Ratings	Pts
+Unit tests in StoreTester.py
+20 to >19 pts
+Full Marks
+Meets Criterion
+19 to >0 pts
+Partial Marks
+Partly meets criterion
+0 pts
+No Marks
+Comments
+-12: Credit was awarded for two tests. Only 3/4 have assert functions, however you are also missing a third kind of assert function out of the ones that you do have.
+8 / 20 pts
+Main function in Store.py
+10 to >9 pts
+Full Marks
+Meets Criterion
+9 to >0 pts
+Partial Marks
+Partly meets criterion
+0 pts
+No Marks
+10 / 10 pts
+Product class in Store.py
+10 to >9 pts
+Full Marks
+Meets Criterion
+9 to >0 pts
+Partial Marks
+Partly meets criterion
+0 pts
+No Marks
+10 / 10 pts
+Customer class in Store.py
+15 to >14 pts
+Full Marks
+Meets Criterion
+14 to >0 pts
+Partial Marks
+Partly meets criterion
+0 pts
+No Marks
+15 / 15 pts
+Store class in Store.py
+45 to >44 pts
+Full Marks
+Meets Criterion
+44 to >0 pts
+Partial Marks
+Partly meets criterion
+0 pts
+No Marks
+Comments
+-3: Lines 83-84 are unnecessary. You already have those data members on lines 87-88 (which is where they belong, you do not want them outside __init__()). Your __init__() method for your store should take no parameters. If you notice in the readme testing, it instantiates the store with "myStore = Store()" <-- There's no parameters here. So that needs to match in your function definition as well. You'd want __init__() to look like this instead:
+
+def __init__(self): # <--- "self" is always included here for methods included inside
+# of classes, no other parameters exist
+self._inventory = []
+self._membership = [] #<--- lists were used here but you can use whatever
+# data collection you prefer, like your dictionaries
+
+-3: your add_product() does not work. Product is close, although you use append which is for lists not dictionaries. You want to fix that to work for dictionaries (or change your data members to lists) and then make your add_member() like your add_product() method. I would suggest changing your add_member() method to match to make it simpler.
+
+*Note: get_product_from_id() should be named lookup_product_from_id() per the readme.
+39 / 45 pts
+Deductions
+0 pts
+Full Marks
+0 pts
+No Marks
+0 / 0 pts
+Total Points: 82
